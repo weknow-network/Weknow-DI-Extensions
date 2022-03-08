@@ -6,9 +6,9 @@ name: Build & Deploy NuGet
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
     inputs:
       logLevel:
