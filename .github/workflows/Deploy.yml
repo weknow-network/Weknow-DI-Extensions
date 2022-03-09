@@ -5,30 +5,31 @@ name: Build & Deploy NuGet
 # secrets: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#example-17
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_run:
+    workflows: ["Prepare"]
+    types:
+      - completed
+
   workflow_dispatch:
     inputs:
       logLevel:
         description: 'Log level'     
         required: false
         default: 'warning'
+    
+env: # https://docs.github.com/en/actions/learn-github-actions/environment-variables
+  BUILD_CONFIG: Release
+  DOTNET_VER: 6.0.x
+  INCLUDE_PRERELEASE: false
   
 jobs:
-
-  version_increment:
-    uses: weknow-network/weknow-workflows/.github/workflows/dotnet-increment-version.yml@main
       
   build-nuget:
     uses: weknow-network/weknow-workflows/.github/workflows/dotnet-build-deploy-public-nuget.yml@main
-    needs: [version_increment]
     secrets:
       NUGET_PUBLISH: ${{ secrets.NUGET_PUBLISH }}
     with:
       build-config: Release
-      dotnet-version: 6.x
+      dotnet-version: 6.0.x
       include-prerelease: false
-
-
+ 
