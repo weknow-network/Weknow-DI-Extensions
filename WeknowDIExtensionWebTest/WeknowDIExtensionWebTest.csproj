@@ -9,7 +9,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\WeknowDIExtension\WeknowDIExtension.csproj" />
+	  <ProjectReference Include="..\WeknowDIExtensions\WeknowDIExtensions.csproj" />
 	</ItemGroup>
+
 
 </Project>
