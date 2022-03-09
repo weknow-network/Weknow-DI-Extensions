@@ -3,24 +3,16 @@
 
 
 	<PropertyGroup>
-		<AssemblyName>Weknow.DI.Extensions</AssemblyName>
+		<AssemblyName>Weknow.DI.Extensions.Contracts</AssemblyName>
 	</PropertyGroup>
 
 
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="icon.png">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\WeknowDIExtensions.Contracts\WeknowDIExtensions.Contracts.csproj" />
 	</ItemGroup>
 
 

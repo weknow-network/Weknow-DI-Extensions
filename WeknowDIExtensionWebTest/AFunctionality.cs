@@ -1,7 +1,11 @@
 ﻿namespace Bnaya.Samples
 {
-    public class AFunctionality : IFunctionality
+    public class AFunctionality : IFunctionalityTransient
     {
-        public string Id => "A func";
+        public AFunctionality()
+        {
+            Thread.Sleep(1);
+        }
+        public string Id { get; } = $"A {DateTime.Now:fff}";
     }
 }

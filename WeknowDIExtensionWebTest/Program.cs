@@ -13,6 +13,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddKeyedSingleton<IFunctionality, AFunctionality>("A");
 builder.Services.AddKeyedSingleton<IFunctionality, BFunctionality>("B");
+builder.Services.AddKeyedScoped<IFunctionalityScoped, AFunctionality>("A");
+builder.Services.AddKeyedScoped<IFunctionalityScoped, BFunctionality>("B");
+builder.Services.AddKeyedTransient<IFunctionalityTransient, AFunctionality>("A");
+builder.Services.AddKeyedTransient<IFunctionalityTransient, BFunctionality>("B");
+builder.Services.AddTransient<Component<IFunctionality>>();
+builder.Services.AddTransient<Component<IFunctionalityScoped>>();
+builder.Services.AddTransient<Component<IFunctionalityTransient>>();
 
 
 var app = builder.Build();

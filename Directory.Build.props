@@ -17,9 +17,9 @@
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageIconUrl />
 		<PackageTags>weknow, DI, Injection, IoC, Dependency</PackageTags>
-		<RootNamespace>Weknow.Backend</RootNamespace>
+		<RootNamespace>Bnaya.Samples</RootNamespace>
 		<Copyright>Weknow ©</Copyright>
-		<Authors>Weknow</Authors>
+		<Authors>Bnaya Eshet</Authors>
 		<Company>Weknow</Company>
 	</PropertyGroup>
 
