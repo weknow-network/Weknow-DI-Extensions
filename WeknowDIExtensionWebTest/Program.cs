@@ -13,7 +13,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddKeyedSingleton<IFunctionality, AFunctionality>("A");
 builder.Services.AddKeyedSingleton<IFunctionality, BFunctionality>("B");
-builder.Services.AddSingleton<IList<int>>(new List<int> { 1, 2, 3});
 
 
 var app = builder.Build();
