@@ -42,7 +42,7 @@ public class TestController : ControllerBase
 }
 ```
 
-Looking for other extensions?
+Looking for other extensions?  
 Check the following
 - [Json extenssions](https://github.com/weknow-network/Weknow-Json-Extensions)
 - [Async extensions](https://github.com/weknow-network/Bnaya.CSharp.AsyncExtensions)
