@@ -19,7 +19,7 @@ on:
     
 env: # https://docs.github.com/en/actions/learn-github-actions/environment-variables
   BUILD_CONFIG: Release
-  DOTNET_VER: 6.0.x
+  DOTNET_VER: 7.0.x
   INCLUDE_PRERELEASE: false
   
 jobs:
@@ -30,6 +30,6 @@ jobs:
       NUGET_PUBLISH: ${{ secrets.NUGET_PUBLISH }}
     with:
       build-config: Release
-      dotnet-version: 6.0.x
+      dotnet-version: 7.0.x
       include-prerelease: false
  
