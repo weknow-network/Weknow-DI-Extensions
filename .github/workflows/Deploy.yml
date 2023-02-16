@@ -25,7 +25,7 @@ env: # https://docs.github.com/en/actions/learn-github-actions/environment-varia
 jobs:
       
   build-nuget:
-    uses: weknow-network/weknow-workflows/.github/workflows/dotnet-build-deploy-public-nuget.yml@main
+    uses: weknow-network/weknow-workflows/.github/workflows/dotnet-build-deploy-public-nuget.yml@release/2023-02-15
     secrets:
       NUGET_PUBLISH: ${{ secrets.NUGET_PUBLISH }}
     with:
